@@ -40,12 +40,14 @@
                     <h4 class="footer-widget-title">@lang('app.about_us') </h4>
                     <ul class="contact-info">
                         <li><a href="{{route('home')}}">@lang('app.home')</a> </li>
-
-                        @if($show_in_footer_menu->count() > 0)
-                            @foreach($show_in_footer_menu as $page)
-                                <li><a href="{{ route('single_page', $page->slug) }}">{{ $page->title }} </a></li>
-                            @endforeach
-                        @endif
+@if (isset($show_in_footer_menu))
+    
+@if($show_in_footer_menu->count() > 0)
+@foreach($show_in_footer_menu as $page)
+<li><a href="{{ route('single_page', $page->slug) }}">{{ $page->title }} </a></li>
+@endforeach
+@endif
+@endif
 
                     </ul>
                 </div>

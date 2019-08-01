@@ -14,7 +14,7 @@
         "laravelcollective/html": "^5.3.0",
         "stripe/stripe-php": "^4.5",
         "yajra/laravel-datatables-oracle": "^7.3",
-        "gd": "*"
+        "ext-gd": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

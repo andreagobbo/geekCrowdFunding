@@ -104,12 +104,14 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li><a href="{{route('home')}}"><i class="fa fa-home"></i> @lang('app.home')</a></li>
-
-                                @if($header_menu_pages->count() > 0)
-                                    @foreach($header_menu_pages as $page)
-                                        <li><a href="{{ route('single_page', $page->slug) }}">{{ $page->title }} </a></li>
-                                    @endforeach
-                                @endif
+@if (isset($header_menu_pages))
+    
+@if($header_menu_pages->count() > 0)
+@foreach($header_menu_pages as $page)
+<li><a href="{{ route('single_page', $page->slug) }}">{{ $page->title }} </a></li>
+@endforeach
+@endif
+@endif
 
                             </ul>
 
